@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Curso · DigiMax</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <img src="images/logo.png" alt="DigiMax">
+      <span>DigiMax</span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html" class="only-guest">Inicio</a>
+      <a href="cursos.html" class="only-guest">Cursos</a>
+      <a href="nosotros.html" class="only-guest">Nosotros</a>
+      <a href="planes.html" class="only-guest">Planes</a>
+      <a href="contacto.html" class="only-guest">Contacto</a>
+      <a href="index.html" class="only-auth">Inicio</a>
+      <a href="mis-cursos.html" class="only-auth">Mis cursos</a>
+      <a href="clases.html" class="only-auth">Clases en vivo</a>
+      <a href="comunidad.html" class="only-auth">Comunidad</a>
+    </nav>
+    <div class="nav-right">
+      <div class="search-box">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <input type="text" id="navSearchInput" placeholder="Buscar cursos...">
+      </div>
+      <a href="login.html" class="btn btn-ghost only-guest">Iniciar sesión</a>
+      <a href="registro.html" class="btn btn-primary btn-sm only-guest">Registrarse</a>
+      <div class="user-chip only-auth" id="userChip">
+        <div class="user-avatar" id="navUserAvatar">U</div>
+        <div><span class="u-name" id="navUserName">Usuario</span><span class="u-role">Estudiante</span></div>
+        <div class="user-menu" id="userMenu">
+          <a href="perfil.html">👤 Mi perfil</a>
+          <a href="mis-cursos.html">🎓 Mis cursos</a>
+          <hr>
+          <button class="logout-btn">↩ Cerrar sesión</button>
+        </div>
+      </div>
+    </div>
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Menú">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<div id="courseDetailRoot">
+
+  <section class="course-hero">
+    <div class="container">
+      <div>
+        <div class="breadcrumb"><a href="index.html">Inicio</a> / <a href="cursos.html">Cursos</a> / <span id="cdBreadcrumbTitle"></span></div>
+        <span class="course-hero-tag" id="cdCategory"></span>
+        <h1 id="cdTitle"></h1>
+        <p class="lead" id="cdDesc"></p>
+        <div class="course-hero-meta">
+          <span id="cdRating"></span>
+          <span id="cdLevel"></span>
+          <span id="cdDuration"></span>
+          <span id="cdLessons"></span>
+        </div>
+        <div class="instructor-chip">
+          <div class="user-avatar" id="cdTeacherAvatar"></div>
+          <div>
+            <strong id="cdTeacherName"></strong>
+            <span id="cdTeacherRole"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="buy-card">
+        <div class="thumb" id="cdThumb"></div>
+        <div class="buy-price"><span id="cdPrice"></span> <span class="old" id="cdOldPrice"></span></div>
+        <p style="margin:0 0 6px;font-size:12.5px;">Acceso de por vida · Certificado incluido</p>
+        <button class="btn btn-primary btn-block btn-lg" id="cdBuyBtn">Comprar curso</button>
+        <ul class="buy-list">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Acceso ilimitado de por vida</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Certificado al finalizar</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Clases en vivo con el profesor</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Acceso a la comunidad DigiMax</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="course-detail-body">
+      <div>
+        <div class="detail-block">
+          <h3>Contenido del curso</h3>
+          <div id="cdCurriculum"></div>
+        </div>
+        <div class="detail-block">
+          <h3>Sobre el profesor</h3>
+          <div class="instructor-chip" style="margin-top:0;">
+            <div class="user-avatar"></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="detail-block">
+          <h3>Cursos relacionados</h3>
+          <div id="cdRelated" style="display:flex;flex-direction:column;gap:16px;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ MODAL DE PAGO ============ -->
+<div class="modal-overlay" id="paymentModal">
+  <div class="modal-box">
+    <button class="modal-close" data-close-modal="paymentModal">✕</button>
+    <h3>Finalizar compra</h3>
+    <div class="order-item" style="margin:20px 0;">
+      <div class="thumb-sm" id="pmThumb"></div>
+      <div>
+        <h5 id="pmCourseTitle"></h5>
+        <span id="pmCoursePrice"></span>
+      </div>
+    </div>
+
+    <div class="form-error" id="pmError"></div>
+
+    <form id="paymentForm" novalidate>
+      <div class="field">
+        <label for="pmCardName">Nombre en la tarjeta</label>
+        <input type="text" id="pmCardName" placeholder="Como aparece en la tarjeta">
+      </div>
+      <div class="field">
+        <label for="pmCardNumber">Número de tarjeta (ficticio)</label>
+        <input type="text" id="pmCardNumber" placeholder="4111 1111 1111 1111" maxlength="19">
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label for="pmExpiry">Vencimiento</label>
+          <input type="text" id="pmExpiry" placeholder="MM/AA" maxlength="5">
+        </div>
+        <div class="field">
+          <label for="pmCvv">CVV</label>
+          <input type="text" id="pmCvv" placeholder="123" maxlength="4">
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block btn-lg" id="pmSubmitBtn" style="margin-top:8px;">Realizar pago</button>
+    </form>
+  </div>
+</div>
+
+<!-- ============ MODAL DE ÉXITO ============ -->
+<div class="modal-overlay" id="successModal">
+  <div class="modal-box">
+    <button class="modal-close" data-close-modal="successModal">✕</button>
+    <div class="modal-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg></div>
+    <h3>¡Pago realizado con éxito!</h3>
+    <p class="center">El curso fue agregado a tu lista de "Mis cursos". Ya puedes comenzar a aprender.</p>
+    <a href="mis-cursos.html" class="btn btn-primary btn-block">Ir a Mis cursos</a>
+    <button class="btn btn-outline btn-block" style="margin-top:10px;" data-close-modal="successModal">Seguir explorando</button>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom" style="border-top:none;padding-top:0;">
+      <span>© 2026 DigiMax. Todos los derechos reservados.</span>
+      <div><a href="index.html">Volver al inicio</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+<script src="js/pagos.js"></script>
+
+</body>
+</html>

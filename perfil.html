@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mi perfil · DigiMax</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <img src="images/logo.png" alt="DigiMax">
+      <span>DigiMax</span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html" class="only-guest">Inicio</a>
+      <a href="cursos.html" class="only-guest">Cursos</a>
+      <a href="index.html" class="only-auth">Inicio</a>
+      <a href="mis-cursos.html" class="only-auth">Mis cursos</a>
+      <a href="clases.html" class="only-auth">Clases en vivo</a>
+      <a href="comunidad.html" class="only-auth">Comunidad</a>
+    </nav>
+    <div class="nav-right">
+      <div class="search-box">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <input type="text" id="navSearchInput" placeholder="Buscar cursos...">
+      </div>
+      <a href="login.html" class="btn btn-ghost only-guest">Iniciar sesión</a>
+      <a href="registro.html" class="btn btn-primary btn-sm only-guest">Registrarse</a>
+      <div class="user-chip only-auth" id="userChip">
+        <div class="user-avatar" id="navUserAvatar">U</div>
+        <div><span class="u-name" id="navUserName">Usuario</span><span class="u-role">Estudiante</span></div>
+        <div class="user-menu" id="userMenu">
+          <a href="perfil.html">👤 Mi perfil</a>
+          <a href="mis-cursos.html">🎓 Mis cursos</a>
+          <hr>
+          <button class="logout-btn">↩ Cerrar sesión</button>
+        </div>
+      </div>
+    </div>
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Menú">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<section id="profileRoot" style="padding-top:36px;">
+  <div class="container">
+    <div class="profile-header">
+      <div class="user-avatar" id="profAvatar">U</div>
+      <div>
+        <h2 id="profName">Usuario</h2>
+        <p id="profEmail">correo@ejemplo.com</p>
+      </div>
+      <button class="btn btn-outline profile-edit" style="background:rgba(255,255,255,.15);border-color:rgba(255,255,255,.4);color:#fff;">Editar perfil</button>
+    </div>
+
+    <div class="profile-grid">
+      <div class="info-card">
+        <h4>Información de la cuenta</h4>
+        <div class="info-row"><span>Nombre</span><span id="profName2">—</span></div>
+        <div class="info-row"><span>Correo</span><span id="profEmail2">—</span></div>
+        <div class="info-row"><span>Miembro desde</span><span id="profJoined">—</span></div>
+        <div class="info-row"><span>Plan</span><span>Gratuito</span></div>
+      </div>
+
+      <div class="info-card">
+        <h4>Resumen de aprendizaje</h4>
+        <div class="info-row"><span>Cursos inscritos</span><span id="profTotalCourses">0</span></div>
+        <div class="info-row"><span>Cursos completados</span><span id="profCompleted">0</span></div>
+        <div class="info-row"><span>Progreso general</span><span id="profAvgProgress">0%</span></div>
+        <a href="mis-cursos.html" class="btn btn-primary btn-block" style="margin-top:16px;">Ver mis cursos</a>
+      </div>
+    </div>
+
+    <div style="margin-top:20px;">
+      <button class="btn btn-outline logout-btn">↩ Cerrar sesión</button>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const n = document.getElementById("profName");
+    const e = document.getElementById("profEmail");
+    const n2 = document.getElementById("profName2");
+    const e2 = document.getElementById("profEmail2");
+    const sync = () => { if(n && n2) n2.textContent = n.textContent; if(e && e2) e2.textContent = e.textContent; };
+    setTimeout(sync, 0);
+  });
+</script>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom" style="border-top:none;padding-top:0;">
+      <span>© 2026 DigiMax. Todos los derechos reservados.</span>
+      <div><a href="index.html">Volver al inicio</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

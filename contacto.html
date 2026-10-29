@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto — DigiMax</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="navbar">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <img src="images/logo.png" alt="DigiMax">
+      <span>DigiMax</span>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html" class="only-guest">Inicio</a>
+      <a href="cursos.html" class="only-guest">Cursos</a>
+      <a href="nosotros.html" class="only-guest">Nosotros</a>
+      <a href="planes.html" class="only-guest">Planes</a>
+      <a href="contacto.html" class="only-guest">Contacto</a>
+
+      <a href="index.html" class="only-auth">Inicio</a>
+      <a href="mis-cursos.html" class="only-auth">Mis cursos</a>
+      <a href="clases.html" class="only-auth">Clases en vivo</a>
+      <a href="comunidad.html" class="only-auth">Comunidad</a>
+    </nav>
+
+    <div class="nav-right">
+      <div class="search-box">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <input type="text" id="navSearchInput" placeholder="Buscar cursos...">
+      </div>
+
+      <a href="#" class="btn-icon only-guest" title="Carrito">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg>
+      </a>
+      <a href="login.html" class="btn btn-ghost only-guest">Iniciar sesión</a>
+      <a href="registro.html" class="btn btn-primary btn-sm only-guest">Registrarse</a>
+
+      <button class="btn-icon icon-badge only-auth" title="Notificaciones"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg><span class="dot"></span></button>
+
+      <div class="user-chip only-auth" id="userChip">
+        <div class="user-avatar" id="navUserAvatar">U</div>
+        <div>
+          <span class="u-name" id="navUserName">Usuario</span>
+          <span class="u-role">Estudiante</span>
+        </div>
+        <div class="user-menu" id="userMenu">
+          <a href="perfil.html">👤 Mi perfil</a>
+          <a href="mis-cursos.html">🎓 Mis cursos</a>
+          <hr>
+          <button class="logout-btn">↩ Cerrar sesión</button>
+        </div>
+      </div>
+    </div>
+
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Menú">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
+
+  <main class="container page-padding">
+
+  <!-- Encabezado con espaciado amplio -->
+  <div class="contact-header">
+    <h1 class="page-title">Ponte en Contacto</h1>
+    <p class="hero-desc">¿Tienes alguna duda o consulta sobre nuestros cursos y suscripciones? Escríbenos.</p>
+  </div>
+
+  <!-- Grid de Contacto -->
+  <div class="contact-grid">
+
+    <!-- Tarjeta de Información -->
+    <div class="contact-card">
+      <h3>Información de Contacto</h3>
+      
+      <div class="contact-info-list">
+        
+        <!-- Dirección -->
+        <div class="contact-info-item">
+          <div class="contact-icon-wrapper">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div class="contact-info-content">
+            <strong>Dirección</strong>
+            <span>Av. Tecnológica #45-12, Cali, Valle del Cauca, Colombia.</span>
+          </div>
+        </div>
+
+        <!-- Correo Electrónico -->
+        <div class="contact-info-item">
+          <div class="contact-icon-wrapper">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          </div>
+          <div class="contact-info-content">
+            <strong>Correo Electrónico</strong>
+            <a href="mailto:contacto@digimax-edu.com">contacto@digimax-edu.com</a>
+          </div>
+        </div>
+
+        <!-- Teléfono / WhatsApp -->
+        <div class="contact-info-item">
+          <div class="contact-icon-wrapper">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div class="contact-info-content">
+            <strong>Teléfono / WhatsApp</strong>
+            <span>+57 300 123 4567</span>
+          </div>
+        </div>
+
+        <!-- Horario de Atención -->
+        <div class="contact-info-item">
+          <div class="contact-icon-wrapper">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div class="contact-info-content">
+            <strong>Horario de atención</strong>
+            <span>Lunes a Viernes de 8:00 AM a 6:00 PM</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Formulario de Contacto -->
+    <div class="contact-card">
+      <form class="contact-form" onsubmit="event.preventDefault(); alert('¡Gracias por tu mensaje! Te responderemos muy pronto.');">
+        
+        <div class="form-group">
+          <label for="fullName">Nombre Completo</label>
+          <input type="text" id="fullName" class="input-field" placeholder="Tu nombre" required>
+        </div>
+
+        <div class="form-group">
+          <label for="userEmail">Correo Electrónico</label>
+          <input type="email" id="userEmail" class="input-field" placeholder="tu@email.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="userMessage">Mensaje</label>
+          <textarea id="userMessage" class="input-field" rows="4" placeholder="Escribe tu consulta aquí..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn-send-message">Enviar Mensaje</button>
+      </form>
+    </div>
+
+  </div>
+
+</main>
+  <script src="js/script.js"></script>
+</body>
+</html>

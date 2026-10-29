@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pagar curso · DigiMax</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <img src="images/logo.png" alt="DigiMax">
+      <span>DigiMax</span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html" class="only-guest">Inicio</a>
+      <a href="cursos.html" class="only-guest">Cursos</a>
+      <a href="index.html" class="only-auth">Inicio</a>
+      <a href="mis-cursos.html" class="only-auth">Mis cursos</a>
+      <a href="clases.html" class="only-auth">Clases en vivo</a>
+      <a href="comunidad.html" class="only-auth">Comunidad</a>
+    </nav>
+    <div class="nav-right">
+      <div class="user-chip only-auth" id="userChip">
+        <div class="user-avatar" id="navUserAvatar">U</div>
+        <div><span class="u-name" id="navUserName">Usuario</span><span class="u-role">Estudiante</span></div>
+        <div class="user-menu" id="userMenu">
+          <a href="perfil.html">👤 Mi perfil</a>
+          <a href="mis-cursos.html">🎓 Mis cursos</a>
+          <hr>
+          <button class="logout-btn">↩ Cerrar sesión</button>
+        </div>
+      </div>
+      <a href="login.html" class="btn btn-ghost only-guest">Iniciar sesión</a>
+    </div>
+  </div>
+</header>
+
+<div class="page-header">
+  <div class="container">
+    <div class="breadcrumb"><a href="cursos.html">Cursos</a> / Pago</div>
+    <h1>Finalizar compra</h1>
+  </div>
+</div>
+
+<div id="checkoutRoot">
+  <div class="container">
+    <div class="pay-steps">
+      <div class="pay-step done"><span class="num">✓</span> Curso</div>
+      <div class="pay-sep"></div>
+      <div class="pay-step active"><span class="num">2</span> Pago</div>
+      <div class="pay-sep"></div>
+      <div class="pay-step"><span class="num">3</span> Confirmación</div>
+    </div>
+
+    <div class="checkout-layout">
+      <div>
+        <h3 style="margin-bottom:16px;">Método de pago</h3>
+
+        <div class="form-error" id="ckError"></div>
+
+        <form id="checkoutForm" novalidate>
+          <div class="field">
+            <label for="ckCardName">Nombre en la tarjeta</label>
+            <input type="text" id="ckCardName" class="input" placeholder="Como aparece en la tarjeta">
+          </div>
+          <div class="field">
+            <label for="ckCardNumber">Número de tarjeta (ficticio)</label>
+            <input type="text" id="ckCardNumber" class="input" placeholder="4111 1111 1111 1111" maxlength="19">
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="ckExpiry">Vencimiento</label>
+              <input type="text" id="ckExpiry" class="input" placeholder="MM/AA" maxlength="5">
+            </div>
+            <div class="field">
+              <label for="ckCvv">CVV</label>
+              <input type="text" id="ckCvv" class="input" placeholder="123" maxlength="4">
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block btn-lg" id="ckSubmitBtn">Realizar pago</button>
+        </form>
+        <p class="secure-note">🔒 Simulación de pago — no se procesará ningún cobro real.</p>
+      </div>
+
+      <div class="order-summary">
+        <h4 style="margin-bottom:16px;">Resumen del pedido</h4>
+        <div class="order-item">
+          <div class="thumb-sm" id="ckThumb"></div>
+          <div>
+            <h5 id="ckTitle"></h5>
+            <span id="ckTeacher"></span>
+          </div>
+        </div>
+        <div class="order-line"><span>Precio del curso</span><span id="ckPrice"></span></div>
+        <div class="order-line"><span>Subtotal</span><span id="ckSubtotal"></span></div>
+        <div class="order-line total"><span>Total</span><span id="ckTotal"></span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom" style="border-top:none;padding-top:0;">
+      <span>© 2026 DigiMax. Todos los derechos reservados.</span>
+      <div><a href="index.html">Volver al inicio</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+<script src="js/pagos.js"></script>
+
+</body>
+</html>

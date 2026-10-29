@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DigiMax · Aprende sin límites</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============ NAVBAR ============ -->
+<header class="navbar">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <img src="images/logo.png" alt="DigiMax">
+      <span>DigiMax</span>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html" class="only-guest">Inicio</a>
+      <a href="cursos.html" class="only-guest">Cursos</a>
+      <a href="nosotros.html" class="only-guest">Nosotros</a>
+      <a href="planes.html" class="only-guest">Planes</a>
+      <a href="contacto.html" class="only-guest">Contacto</a>
+
+      <a href="index.html" class="only-auth">Inicio</a>
+      <a href="mis-cursos.html" class="only-auth">Mis cursos</a>
+      <a href="clases.html" class="only-auth">Clases en vivo</a>
+      <a href="comunidad.html" class="only-auth">Comunidad</a>
+    </nav>
+
+    <div class="nav-right">
+      <div class="search-box">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <input type="text" id="navSearchInput" placeholder="Buscar cursos...">
+      </div>
+
+      <a href="#" class="btn-icon only-guest" title="Carrito">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg>
+      </a>
+      <a href="login.html" class="btn btn-ghost only-guest">Iniciar sesión</a>
+      <a href="registro.html" class="btn btn-primary btn-sm only-guest">Registrarse</a>
+
+      <button class="btn-icon icon-badge only-auth" title="Notificaciones"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg><span class="dot"></span></button>
+
+      <div class="user-chip only-auth" id="userChip">
+        <div class="user-avatar" id="navUserAvatar">U</div>
+        <div>
+          <span class="u-name" id="navUserName">Usuario</span>
+          <span class="u-role">Estudiante</span>
+        </div>
+        <div class="user-menu" id="userMenu">
+          <a href="perfil.html">👤 Mi perfil</a>
+          <a href="mis-cursos.html">🎓 Mis cursos</a>
+          <hr>
+          <button class="logout-btn">↩ Cerrar sesión</button>
+        </div>
+      </div>
+    </div>
+
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Menú">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-copy">
+      <span class="eyebrow">✨ Aprende sin límites</span>
+      <h1>Clases virtuales<br>para tu <span class="accent">futuro</span></h1>
+      <p class="lead">Accede a cursos de calidad desde cualquier lugar y a tu ritmo. Aprende, crece y alcanza tus metas junto a instructores expertos.</p>
+      <div class="hero-cta">
+        <a href="cursos.html" class="btn btn-primary btn-lg">Explorar cursos</a>
+        <a href="#como-funciona" class="btn btn-outline btn-lg">▶ Ver cómo funciona</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/></svg></div>
+          <div><strong>Cursos de calidad</strong><span>Contenido actualizado</span></div>
+        </div>
+        <div class="hero-stat">
+          <div class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+          <div><strong>Aprende a tu ritmo</strong><span>Sin horarios fijos</span></div>
+        </div>
+        <div class="hero-stat">
+          <div class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"/><path d="M8.2 19.3 9 15l-3-2.5L10.5 12 12 8l1.5 4 4.5.5L15 15l.8 4.3L12 17.5Z"/></svg></div>
+          <div><strong>Certificados</strong><span>Al finalizar cada curso</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="frame">
+        <img src="images/hero-woman.png" alt="Estudiante aprendiendo en línea con DigiMax">
+      </div>
+      <div class="float-card progress-card">
+        <div class="fc-title">Progreso general</div>
+        <div class="progress-bar"><span style="width:75%"></span></div>
+        <span class="fc-percent">75%</span>
+      </div>
+      <div class="float-card lesson-card">
+        <div class="lesson-thumb"></div>
+        <div>
+          <div class="fc-title" style="margin-bottom:2px;">Continúa aprendiendo</div>
+          <div class="fc-course">Marketing Digital</div>
+          <div class="progress-bar sm" style="width:120px;margin-top:5px;"><span style="width:80%"></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CATEGORÍAS ============ -->
+<section id="categorias">
+  <div class="container">
+    <div class="section-center">
+      <h2>Explora nuestras categorías</h2>
+      <p>Encuentra el curso perfecto entre nuestras áreas de aprendizaje.</p>
+    </div>
+    <div class="category-grid" id="categoryGrid"></div>
+  </div>
+</section>
+
+<!-- ============ CURSOS DESTACADOS ============ -->
+<section class="section-soft" id="cursos-destacados">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <h2>Cursos destacados</h2>
+        <p>Los favoritos de nuestra comunidad de estudiantes.</p>
+      </div>
+      <a href="cursos.html" class="link-more">Ver todos →</a>
+    </div>
+    <div class="course-grid" id="featuredCourses"></div>
+  </div>
+</section>
+
+<!-- ============ POR QUÉ DIGIMAX ============ -->
+<section id="como-funciona">
+  <div class="container">
+    <div class="section-center">
+      <h2>¿Por qué aprender en DigiMax?</h2>
+      <p>Todo lo que necesitas para avanzar en tu carrera, en un solo lugar.</p>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="f-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 3v4M8 3v4M2 11h20"/></svg></div>
+        <h4>Aprende en cualquier lugar</h4>
+        <p>Accede desde tu computador, tablet o celular cuando quieras.</p>
+      </div>
+      <div class="feature-card">
+        <div class="f-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <h4>Para todas las edades</h4>
+        <p>Cursos diseñados para jóvenes, adultos y niños.</p>
+      </div>
+      <div class="feature-card">
+        <div class="f-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"/><path d="M8.2 19.3 9 15l-3-2.5L10.5 12 12 8l1.5 4 4.5.5L15 15l.8 4.3L12 17.5Z"/></svg></div>
+        <h4>Certificados incluidos</h4>
+        <p>Obtén tu certificado y mejora tu perfil profesional.</p>
+      </div>
+      <div class="feature-card">
+        <div class="f-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.3a2 2 0 0 0 2-1.7l1.4-9a2 2 0 0 0-2-2.3H14Z"/><path d="M7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg></div>
+        <h4>Soporte y acompañamiento</h4>
+        <p>Estamos contigo en cada paso de tu aprendizaje.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section id="planes">
+  <div class="container">
+    <div class="cta-band">
+      <div>
+        <h2>¿Listo para empezar a aprender?</h2>
+        <p>Únete a miles de estudiantes que ya están construyendo su futuro con DigiMax.</p>
+      </div>
+      <a href="registro.html" class="btn btn-primary btn-lg">Crear cuenta gratis</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer id="contacto">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img src="images/logo.png" alt="DigiMax">
+          <span>DigiMax</span>
+        </div>
+        <p>Plataforma de cursos online para aprender nuevas habilidades a tu ritmo, desde cualquier lugar del mundo.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v7h3v-7h3l1-3h-4V9c0-.6.4-1 1-1Z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2 2 0 1 1 0 4 2 2 0 0 1 0-4ZM3 8.98h4V21H3zM9 8.98h3.8v1.64h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.6c0-1.34-.02-3.06-1.87-3.06-1.87 0-2.16 1.46-2.16 2.96V21H9Z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h5>Plataforma</h5>
+        <ul>
+          <li><a href="cursos.html">Cursos</a></li>
+          <li><a href="#categorias">Categorías</a></li>
+          <li><a href="#planes">Planes</a></li>
+          <li><a href="registro.html">Crear cuenta</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Compañía</h5>
+        <ul>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Trabaja con nosotros</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Soporte</h5>
+        <ul>
+          <li><a href="#">Centro de ayuda</a></li>
+          <li><a href="#">Términos y condiciones</a></li>
+          <li><a href="#">Privacidad</a></li>
+          <li><a href="#">Preguntas frecuentes</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 DigiMax. Todos los derechos reservados.</span>
+      <div><a href="#">Términos</a><a href="#">Privacidad</a><a href="#">Cookies</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

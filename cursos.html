@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cursos · DigiMax</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <img src="images/logo.png" alt="DigiMax">
+      <span>DigiMax</span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html" class="only-guest">Inicio</a>
+      <a href="cursos.html" class="only-guest">Cursos</a>
+      <a href="nosotros.html" class="only-guest">Nosotros</a>
+      <a href="planes.html" class="only-guest">Planes</a>
+      <a href="contacto.html" class="only-guest">Contacto</a>
+      <a href="index.html" class="only-auth">Inicio</a>
+      <a href="mis-cursos.html" class="only-auth">Mis cursos</a>
+      <a href="clases.html" class="only-auth">Clases en vivo</a>
+      <a href="comunidad.html" class="only-auth">Comunidad</a>
+    </nav>
+    <div class="nav-right">
+      <div class="search-box">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <input type="text" id="navSearchInput" placeholder="Buscar cursos...">
+      </div>
+      <a href="login.html" class="btn btn-ghost only-guest">Iniciar sesión</a>
+      <a href="registro.html" class="btn btn-primary btn-sm only-guest">Registrarse</a>
+      <div class="user-chip only-auth" id="userChip">
+        <div class="user-avatar" id="navUserAvatar">U</div>
+        <div><span class="u-name" id="navUserName">Usuario</span><span class="u-role">Estudiante</span></div>
+        <div class="user-menu" id="userMenu">
+          <a href="perfil.html">👤 Mi perfil</a>
+          <a href="mis-cursos.html">🎓 Mis cursos</a>
+          <hr>
+          <button class="logout-btn">↩ Cerrar sesión</button>
+        </div>
+      </div>
+    </div>
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Menú">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="page-header">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Inicio</a> / Cursos</div>
+    <h1>Todos los cursos</h1>
+    <p>Explora nuestro catálogo completo y encuentra el curso ideal para ti.</p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="filters-bar">
+    <button class="filter-chip" data-cat="todas">Todas</button>
+    <button class="filter-chip" data-cat="tecnologia">Tecnología</button>
+    <button class="filter-chip" data-cat="negocios">Negocios</button>
+    <button class="filter-chip" data-cat="personal">Desarrollo personal</button>
+    <button class="filter-chip" data-cat="diseno">Diseño</button>
+    <button class="filter-chip" data-cat="marketing">Marketing</button>
+    <button class="filter-chip" data-cat="idiomas">Idiomas</button>
+    <div class="search-box">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      <input type="text" id="coursesSearch" placeholder="Buscar por nombre, categoría o profesor...">
+    </div>
+  </div>
+  <p id="resultsCount" style="color:var(--text-muted);font-size:13.5px;margin-top:-14px;margin-bottom:20px;"></p>
+</div>
+
+<section style="padding-top:0;">
+  <div class="container">
+    <div class="course-grid" id="coursesGrid"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img src="images/logo.png" alt="DigiMax">
+          <span>DigiMax</span>
+        </div>
+        <p>Plataforma de cursos online para aprender nuevas habilidades a tu ritmo.</p>
+      </div>
+      <div>
+        <h5>Plataforma</h5>
+        <ul>
+          <li><a href="cursos.html">Cursos</a></li>
+          <li><a href="index.html#categorias">Categorías</a></li>
+          <li><a href="registro.html">Crear cuenta</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Compañía</h5>
+        <ul>
+          <li><a href="index.html#nosotros">Nosotros</a></li>
+          <li><a href="index.html#contacto">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Soporte</h5>
+        <ul>
+          <li><a href="#">Centro de ayuda</a></li>
+          <li><a href="#">Términos y condiciones</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 DigiMax. Todos los derechos reservados.</span>
+      <div><a href="index.html">Volver al inicio</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

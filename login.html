@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Iniciar sesión · DigiMax</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <img src="images/logo.png" alt="DigiMax">
+      <span>DigiMax</span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html" class="only-guest">Inicio</a>
+      <a href="cursos.html" class="only-guest">Cursos</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="planes.html">Planes</a>
+      <a href="contacto.html" class="only-guest">Contacto</a>
+      <a href="index.html" class="only-auth">Inicio</a>
+      <a href="mis-cursos.html" class="only-auth">Mis cursos</a>
+      <a href="clases.html" class="only-auth">Clases en vivo</a>
+      <a href="comunidad.html" class="only-auth">Comunidad</a>
+    </nav>
+    <div class="nav-right">
+      <a href="registro.html" class="btn btn-ghost only-guest">Crear cuenta</a>
+      <div class="user-chip only-auth" id="userChip">
+        <div class="user-avatar" id="navUserAvatar">U</div>
+        <div><span class="u-name" id="navUserName">Usuario</span><span class="u-role">Estudiante</span></div>
+        <div class="user-menu" id="userMenu">
+          <a href="perfil.html">👤 Mi perfil</a>
+          <a href="mis-cursos.html">🎓 Mis cursos</a>
+          <hr>
+          <button class="logout-btn">↩ Cerrar sesión</button>
+        </div>
+      </div>
+    </div>
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Menú">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="auth-wrap">
+  <div class="auth-visual">
+    <img src="images/hero-woman.png" alt="Estudiante de DigiMax aprendiendo en línea">
+    <div class="auth-quote">"DigiMax me ayudó a aprender marketing digital y conseguir mi primer cliente en menos de dos meses." — Laura Gómez, estudiante</div>
+  </div>
+  <div class="auth-panel">
+    <div class="auth-box">
+      <h1>Bienvenido de nuevo</h1>
+      <p>Inicia sesión para continuar aprendiendo.</p>
+
+      <div class="form-error" id="loginError"></div>
+
+      <form id="loginForm" novalidate>
+        <div class="field">
+          <label for="loginEmail">Correo electrónico</label>
+          <input type="email" id="loginEmail" placeholder="tucorreo@ejemplo.com" required>
+        </div>
+        <div class="field">
+          <label for="loginPassword">Contraseña</label>
+          <input type="password" id="loginPassword" placeholder="••••••••" required>
+        </div>
+        <div class="field-check">
+          <label style="display:flex;align-items:center;gap:8px;"><input type="checkbox"> Recordarme</label>
+          <a href="#" style="margin-left:auto;color:var(--primary);font-weight:600;">¿Olvidaste tu contraseña?</a>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block btn-lg">Iniciar sesión</button>
+      </form>
+
+      <p class="field-hint" style="margin-top:14px;">Consejo: como es una demo, puedes registrarte con cualquier correo ficticio y luego iniciar sesión con esos mismos datos.</p>
+
+      <div class="auth-switch">¿No tienes cuenta? <a href="registro.html">Regístrate gratis</a></div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom" style="border-top:none;padding-top:0;">
+      <span>© 2026 DigiMax. Todos los derechos reservados.</span>
+      <div><a href="index.html">Volver al inicio</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

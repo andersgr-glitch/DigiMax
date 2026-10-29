@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre Nosotros — DigiMax</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="navbar">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <img src="images/logo.png" alt="DigiMax">
+      <span>DigiMax</span>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html" class="only-guest">Inicio</a>
+      <a href="cursos.html" class="only-guest">Cursos</a>
+      <a href="nosotros.html" class="only-guest">Nosotros</a>
+      <a href="planes.html" class="only-guest">Planes</a>
+      <a href="contacto.html" class="only-guest">Contacto</a>
+
+      <a href="index.html" class="only-auth">Inicio</a>
+      <a href="mis-cursos.html" class="only-auth">Mis cursos</a>
+      <a href="clases.html" class="only-auth">Clases en vivo</a>
+      <a href="comunidad.html" class="only-auth">Comunidad</a>
+    </nav>
+
+    <div class="nav-right">
+      <div class="search-box">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <input type="text" id="navSearchInput" placeholder="Buscar cursos...">
+      </div>
+
+      <a href="#" class="btn-icon only-guest" title="Carrito">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg>
+      </a>
+      <a href="login.html" class="btn btn-ghost only-guest">Iniciar sesión</a>
+      <a href="registro.html" class="btn btn-primary btn-sm only-guest">Registrarse</a>
+
+      <button class="btn-icon icon-badge only-auth" title="Notificaciones"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg><span class="dot"></span></button>
+
+      <div class="user-chip only-auth" id="userChip">
+        <div class="user-avatar" id="navUserAvatar">U</div>
+        <div>
+          <span class="u-name" id="navUserName">Usuario</span>
+          <span class="u-role">Estudiante</span>
+        </div>
+        <div class="user-menu" id="userMenu">
+          <a href="perfil.html">👤 Mi perfil</a>
+          <a href="mis-cursos.html">🎓 Mis cursos</a>
+          <hr>
+          <button class="logout-btn">↩ Cerrar sesión</button>
+        </div>
+      </div>
+    </div>
+
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Menú">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
+
+  <main class="container page-padding">
+    <section class="hero-section" style="text-align: center; margin-bottom: 3rem;">
+      <span class="badge">Nuestra Historia</span>
+      <h1 class="page-title">Impulsando la Educación Digital e Inclusiva</h1>
+      <p class="hero-desc" style="max-width: 750px; margin: 0 auto;">
+        Somos un grupo de estudiantes de último año de colegio apasionados por la tecnología. Nacimos con la firme convicción de promover el uso de herramientas virtuales para facilitar la enseñanza y democratizar el aprendizaje.
+      </p>
+    </section>
+
+    <div class="about-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+      <div class="card p-4">
+        <h3>🎯 Nuestra Misión</h3>
+        <p>Brindar oportunidades educativas accesibles a personas que no disponen de tiempo o recursos económicos suficientes para asistir a centros de formación presenciales.</p>
+      </div>
+      <div class="card p-4">
+        <h3>🚀 Nuestra Visión</h3>
+        <p>Convertirnos en la plataforma de aprendizaje virtual líder para jóvenes y adultos que buscan capacitarse a su propio ritmo con un estándar de alta calidad.</p>
+      </div>
+    </div>
+  </main>
+  <script src="js/script.js"></script>
+</body>
+</html>
